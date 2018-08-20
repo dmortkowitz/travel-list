@@ -1,35 +1,51 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Travel Journal</title>
-  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-  <link href="css/styles.css" rel="stylesheet" type="text/css" media="all" />
-  <link href="https://fonts.googleapis.com/css?family=Lobster+Two:400,700|Tinos|Flamenco|Sofia" rel="stylesheet">
-  <script src="js/jquery-3.3.1.js"></script>
-  <script src="js/scripts.js"></script>
-</head>
+  <head>
+    <title>Travel Journal</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/styles.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="https://fonts.googleapis.com/css?family=Lobster+Two:400,700|Tinos|Flamenco|Sofia" rel="stylesheet">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
 
-<body>
-  <div class="container">
-    <h1>Travel History</h1>
-    <form id="new-location">
-      <div class="form-group">
-        <label>City</label>
-        <input id="new-cityLocation" class="form-control"/>
+  <body>
+    <div class="container">
+      <h1>Travel History</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Add a location:</h2>
+          <form id="new-location">
+            <div class="form-group">
+              <label>City</label>
+              <input id="new-cityLocation" class="form-control"/>
+            </div>
+            <div class="form-group">
+              <label>Country</label>
+              <input id="new-countryLocation" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label>Notes</label>
+                <input id="new-notes" class="form-control"/>
+            </div>
+            <button class="btn btn-success" type="submit">Where have you been?</button>
+          </form>
+        <h2>Where I've been</h2>
+        <ul id="locations">
+        </ul>
       </div>
-      <div class="form-group">
-        <label>Country</label>
-        <input id="new-countryLocation" class="form-control"/>
+      <div class="col-md-6">
+        <div id="show-location">
+          <h2></h2>
+          <p>City name: <span class="city-name"></span></p>
+          <p>Country name: <span class="country-name"></span></p>
+          <p>Notes: <span class="output-notes"></span></p>
+
+
+        </div>
       </div>
-
-      <button class="btn btn-success" type="submit"></button>
-    </form>
-    <h2>Where I've been</h2>
-    <ul id="locations">
-
-    </ul>
-  </div>
-
-</body>
+      </div>
+    </div>
+  </body>
 
 </html>
